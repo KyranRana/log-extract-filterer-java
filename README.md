@@ -1,3 +1,9 @@
+# Log Extract Filterer
+
+This is my solution to the Connect Group ITG test.
+
+## Full Description
+
 You are required to write a program which filters application request log extracts by a number of different properties.
 
 A log extract file contains a header line, followed by zero or more data lines, in comma-separated value format. The
