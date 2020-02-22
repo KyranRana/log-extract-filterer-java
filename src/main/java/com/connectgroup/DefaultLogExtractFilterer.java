@@ -47,7 +47,8 @@ public class DefaultLogExtractFilterer implements LogExtractFilterer {
     CountryCode countryCode = CountryCode.valueOf(country);
 
     return getLogEntries(source).stream()
-        .filter(entry -> entry.getCountryCode().equals(countryCode) && entry.getResponseTime() > limit)
+        .filter(
+            entry -> entry.getCountryCode().equals(countryCode) && entry.getResponseTime() > limit)
         .map(LogEntry::toString)
         .collect(Collectors.toList());
   }
