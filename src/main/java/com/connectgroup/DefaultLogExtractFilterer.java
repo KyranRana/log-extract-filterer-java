@@ -32,10 +32,8 @@ public class DefaultLogExtractFilterer implements LogExtractFilterer {
 
   @Override
   public Collection<?> filterByCountry(Reader source, String country) {
-    CountryCode countryCode = CountryCode.valueOf(country);
-
     return getLogEntries(source).stream()
-        .filter(entry -> entry.getCountryCode().equals(countryCode))
+        .filter(entry -> entry.getCountryCode().equals(CountryCode.valueOf(country)))
         .map(LogEntry::toString)
         .collect(Collectors.toList());
   }
@@ -43,12 +41,11 @@ public class DefaultLogExtractFilterer implements LogExtractFilterer {
   @Override
   public Collection<?> filterByCountryWithResponseTimeAboveLimit(
       Reader source, String country, long limit) {
-
-    CountryCode countryCode = CountryCode.valueOf(country);
-
     return getLogEntries(source).stream()
         .filter(
-            entry -> entry.getCountryCode().equals(countryCode) && entry.getResponseTime() > limit)
+            entry ->
+                entry.getCountryCode().equals(CountryCode.valueOf(country))
+                    && entry.getResponseTime() > limit)
         .map(LogEntry::toString)
         .collect(Collectors.toList());
   }
