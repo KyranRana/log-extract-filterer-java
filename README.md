@@ -12,10 +12,11 @@ request originated, and the third column is the time in milliseconds which the r
 are not guaranteed to be in any particular order.
 
 An example file is:
-I
-    REQUEST_TIMESTAMP,COUNTRY_CODE,RESPONSE_TIME
-    1433190845,US,539
-    1432917066,GB,37
+<pre>
+REQUEST_TIMESTAMP,COUNTRY_CODE,RESPONSE_TIME
+1433190845,US,539
+1432917066,GB,37
+</pre>
 
 The features which you must implement have been prototyped in the class com.connectgroup.DefaultLogExtractFilterer. You must implement the
 features in this class without changing the signatures of any methods or add any new maven dependencies. You must also provide
