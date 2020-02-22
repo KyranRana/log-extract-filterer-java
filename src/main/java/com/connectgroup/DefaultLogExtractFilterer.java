@@ -43,6 +43,7 @@ public class DefaultLogExtractFilterer implements LogExtractFilterer {
   @Override
   public Collection<?> filterByCountryWithResponseTimeAboveLimit(
       Reader source, String country, long limit) {
+
     CountryCode countryCode = CountryCode.valueOf(country);
 
     return getLogEntries(source).stream()

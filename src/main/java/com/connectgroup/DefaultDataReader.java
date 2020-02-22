@@ -17,11 +17,13 @@ public class DefaultDataReader implements DataReader {
   @Override
   public List<String> readAllLines(Reader source) {
     List<String> lines;
+
     try (BufferedReader reader = new BufferedReader(source)) {
       lines = reader.lines().collect(Collectors.toList());
     } catch (IOException e) {
       throw new UncheckedIOException(e);
     }
+
     return lines;
   }
 }
