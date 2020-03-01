@@ -18,7 +18,7 @@ public class StringToLogEntryConverterUnitTest {
   public void shouldConvert_WhenStringIsInCorrectFormat() {
     LogEntry actualLogEntry = stringToLogEntryConverter.convert("1433190845,US,539");
 
-    assertEquals(1433190845L, actualLogEntry.getRequestTime());
+    assertEquals(1433190845L, actualLogEntry.getRequestedTimestamp());
     assertEquals(CountryCode.US, actualLogEntry.getCountryCode());
     assertEquals(539L, actualLogEntry.getResponseTime());
   }

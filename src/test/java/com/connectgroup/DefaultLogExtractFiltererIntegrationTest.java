@@ -1,28 +1,24 @@
 package com.connectgroup;
 
-import com.connectgroup.converter.StringToLogEntryConverter;
-import com.connectgroup.validator.LogEntryValidator;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import org.junit.Test;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-
 import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import com.connectgroup.converter.StringToLogEntryConverter;
+import com.connectgroup.validator.LogEntryValidator;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Arrays;
+import java.util.Collections;
+import org.junit.Test;
+
 public class DefaultLogExtractFiltererIntegrationTest {
 
-  private LogExtractFilterer logExtractFilterer;
+  private final LogExtractFilterer logExtractFilterer;
 
   public DefaultLogExtractFiltererIntegrationTest() {
     logExtractFilterer =
-        new DefaultLogExtractFilterer(
-            new DefaultDataReader(), new StringToLogEntryConverter(), new LogEntryValidator());
+        new DefaultLogExtractFilterer(new StringToLogEntryConverter(), new LogEntryValidator());
   }
 
   @Test

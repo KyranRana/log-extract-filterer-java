@@ -4,23 +4,13 @@ import com.connectgroup.exception.InvalidLogEntryException;
 import com.connectgroup.exception.ValidatorException;
 import com.connectgroup.model.CountryCode;
 
-/**
- * Validates a log entry.
- *
- * @author kyranrana
- */
 public class LogEntryValidator implements Validator {
 
-  /**
-   * Validates log entry is in the correct format.
-   *
-   * @param subject Subject.
-   */
   @Override
   public void validate(String subject) throws ValidatorException {
     String[] parts = subject.split(" *, *");
 
-    String exceptionMessage = "A log entry must be in the format: {requestedTime},{countryCode},{responseTime}";
+    String exceptionMessage = "Expected format: {requestedTimestamp},{countryCode},{responseTime}";
 
     if (parts.length != 3) {
       throw new InvalidLogEntryException(exceptionMessage);
