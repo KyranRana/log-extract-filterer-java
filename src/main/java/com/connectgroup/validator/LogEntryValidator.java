@@ -8,9 +8,9 @@ public class LogEntryValidator implements Validator {
 
   @Override
   public void validate(String subject) throws ValidatorException {
-    String[] parts = subject.split(" *, *");
-
     String exceptionMessage = "Expected format: {requestedTimestamp},{countryCode},{responseTime}";
+
+    String[] parts = subject.split(" *, *");
 
     if (parts.length != 3) {
       throw new InvalidLogEntryException(exceptionMessage);
