@@ -1,3 +1,5 @@
+![Java CI with Maven](https://github.com/KyranRana/log-extract-filterer-java/workflows/Java%20CI%20with%20Maven/badge.svg)
+
 # Log Extract Filterer
 
 This is my solution to the Connect Group ITG test.
