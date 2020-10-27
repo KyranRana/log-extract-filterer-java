@@ -1,4 +1,5 @@
 ![Java CI with Maven](https://github.com/KyranRana/log-extract-filterer-java/workflows/Java%20CI%20with%20Maven/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Log Extract Filterer
 
